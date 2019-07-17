@@ -9,7 +9,6 @@ os:
     - windows
 
 install:
-    - npm install -g npm@latest
     - npm install
 
 script:
