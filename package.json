@@ -1,0 +1,21 @@
+{
+  "name": "@async/foreach",
+  "version": "0.1.0",
+  "description": "async/await compat loop function",
+  "main": "./index.js",
+  "scripts": {
+    "test": "mocha ./test/**/*.test.js"
+  },
+  "author": "codearoni",
+  "license": "MIT",
+  "engines": {
+    "node": ">=10.0.0",
+    "npm": ">=6.0.0"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "coveralls": "^3.0.5",
+    "eslint": "^6.0.1",
+    "mocha": "^6.1.4"
+  }
+}
