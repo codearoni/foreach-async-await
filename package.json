@@ -6,7 +6,8 @@
   "scripts": {
     "lint": "eslint ./index.js",
     "test": "mocha ./test/**/*.test.js",
-    "test:travis": "npm run lint && npm run test"
+    "test:travis": "npm run lint && npm run test",
+    "test:appveyor": "npm run lint && npm run test"
   },
   "repository": {
     "type": "git",
