@@ -4,7 +4,13 @@
   "description": "async/await compat loop function",
   "main": "./index.js",
   "scripts": {
-    "test": "mocha ./test/**/*.test.js"
+    "lint": "eslint ./index.js",
+    "test": "mocha ./test/**/*.test.js",
+    "test:travis": "npm run lint && npm run test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/codearoni/async-foreach.git"
   },
   "author": "codearoni",
   "license": "MIT",
