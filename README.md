@@ -12,26 +12,39 @@
 ## Installation
 
 ```bash
-    npm i @async/foreach
+npm i @async/foreach
 ```
+
+## About
+
+There may have been times where you would like to use an async function inside a forEach loop.
+
+```js
+[1, 2, 3, 4].forEach( async (num) => {
+    await someAsyncFunction(num);
+});
+```
+
+As we know, the above example does not work. @async/foreach is a no frills, no dependencies module that makes iterating with async functions easier.
+@async/foreach takes advantage of Promise.all under the hood, so your invocations will run concurrently.
 
 ## Usage
 
 ```js
-    const asyncForEach = require('@async/foreach');
-    const fs = require('fs');
+const asyncForEach = require('@async/foreach');
+const fs = require('fs');
 
-    (async () => {
+(async () => {
 
-        const files = ['./path/to/file1.js', './path/to/file2.js', './path/to/file3.js'];
+    const files = ['./path/to/file1.js', './path/to/file2.js', './path/to/file3.js'];
 
-        const filesContent = await asyncForEach(files, async (file, index, array) => {
-            console.log('The current index in the array:', index);
-            console.log('The entire array:', array);
-            await fs.readFile(file, 'utf8');
-        });
+    const filesContent = await asyncForEach(files, async (file, index, array) => {
+        console.log('The current index in the array:', index);
+        console.log('The entire array:', array);
+        await fs.readFile(file, 'utf8');
+    });
 
-        // Prints the contents of the files read
-        console.log(filesContent);
-    })();
+    // Prints the contents of the files read
+    console.log(filesContent);
+})();
 ```
