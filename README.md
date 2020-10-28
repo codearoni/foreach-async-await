@@ -31,7 +31,7 @@ As we know, the above example does not work. @async/foreach is a no frills, no d
 ## Usage
 
 ```js
-const asyncForEach = require('@async/foreach');
+const asyncForEach = require('foreach-async-await');
 const fs = require('fs');
 
 (async () => {
