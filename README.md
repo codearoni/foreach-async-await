@@ -1,4 +1,4 @@
-# @async/foreach
+# foreach-async-await
 
 > An async/await compatible method with a forEach style signature
 
@@ -12,7 +12,7 @@
 ## Installation
 
 ```bash
-npm i @async/foreach
+npm i foreach-async-await
 ```
 
 ## About
@@ -20,7 +20,7 @@ npm i @async/foreach
 There may have been times where you would like to use an async function inside a forEach loop.
 
 ```js
-[1, 2, 3, 4].forEach( async (num) => {
+[1, 2, 3, 4].forEach(async (num) => {
     await someAsyncFunction(num);
 });
 ```
