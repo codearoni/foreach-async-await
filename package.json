@@ -1,6 +1,6 @@
 {
   "name": "foreach-async-await",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "async/await compat loop function",
   "main": "./index.js",
   "scripts": {
